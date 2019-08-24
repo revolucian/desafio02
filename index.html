@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 2</title>
+    <script type="text/javascript"> 
+
+    var number = 5666
+
+    /*if(number){
+    console.log('Escribiste un numero')
+    }
+
+    console.log('Gracias!')*/
+
+    /*var condicion = null;
+    var condicion2 = 1==2;
+    var condicion3 = 3==3;*/
+
+
+    /*if(condicion) {
+        console.log("entro en el if");
+    }
+    else if(condicion2) {
+        console.log("entro en el else");
+    }
+    else if (condicion3) {
+        console.log("entro en el else2");
+    }*/
+
+/*var resultado = prompt("Cual fue el resultado?");
+
+switch (resultado) {
+    case 'Gano1':
+        console.log ("Se le suman puntos")
+        break
+    case 'Gano':
+        console.log('Se le suman 3 puntos')
+        break
+    case 'Perdio':
+        console.log('Se le suma 1 punto')
+        break
+    case 'Empato':
+        console.log('No se le suma ningún punto')
+        break
+    default:
+        console.log('El resultado no es correcto')
+        break
+    }*/
+
+/*var condicionA = 1>2;
+var condicionB = 2<3;
+var condicionC = "Ana" > "Alan";
+var condicionD = "5"<=5;
+
+if(condicionA) {
+    console.log("1 es mayor a 2");
+}
+else if(condicionB) {
+    console.log("2 es menor a 3");
+}
+else if(condicionC) {
+    console.log("Ana es mayor que Alan");
+}
+else if(condicionD) {
+    console.log("5 es menor o igual a 5");
+}*/
+
+/*var condicion1 = !("Hola" === "Hola");
+var condicion2 = !false;
+var condicion3 = !null;
+var condicion4 = !!"";
+
+if(condicion1) {
+    console.log("condicion1");
+}
+else if(condicion2) {
+    console.log("condicion2");
+}
+else if(condicion3) {
+    console.log("condicion3");
+}
+else if(condicion4) {
+    console.log("condicion4")
+}
+console.log("Todo fue falso");*/
+
+/*var condicion1 = !("Juan" && "Pedro");
+var condicion2 = "Juan" && 0;
+var condicion3 = "" && true;
+var condicion4 = 7 > 9 && false;
+
+if(condicion1) {
+    console.log("condicion1");
+}
+else if(condicion2) {
+    console.log("condicion2");
+}
+else if(condicion3) {
+    console.log("condicion3");
+}
+else if(condicion4) {
+    console.log("condicion4")
+}
+console.log("Todo fue falso");*/
+
+/*var condicion1 = (5>3) || (6<4);
+var condicion2 = "Juan" || 0;
+var condicion3 = "" || true;
+var condicion4 = 7 > 9 || false || 4<5 || 6>2;
+
+if(condicion1) {
+    console.log("condicion1");
+}
+else if(condicion2) {
+    console.log("condicion2");
+}
+else if(condicion3) {
+    console.log("condicion3");
+}
+else if(condicion4) {
+    console.log("condicion4")
+}
+console.log("Todo fue falso");*/
+
+/* 1ERA SOLUCION
+var dia = prompt("Ingrese un dia de la semana")
+
+switch (dia) {
+    
+    case 'Lunes' || "Martes" || "Miercoles" || "Jueves" || "Viernes":
+        console.log ("Es un dia de semana")
+        break
+    case "Sabado" || "Domingo":
+        console.log('Es un fin de semana')
+        break
+    default:
+        console.log('El resultado no es valido')
+        break
+    }
+    
+    2DA SOLUCION
+    var dia = prompt("Ingrese un dia de la semana")
+
+switch (dia) {
+    case 'Lunes'
+    case 'Martes'
+    case 'Miercoles'
+    case 'Jueves'
+    case 'Viernes'
+        console.log ("Es un dia de semana")
+        break
+    case "Sabado"
+    case "Domingo"
+        console.log('Es un fin de semana')
+        break
+    default:
+        console.log('El resultado no es valido')
+        break
+    */
+
+/*DESAFIO 2*/
+var genre= prompt("Ingrese su genero");
+var age= prompt("Ingrese su edad");
+var ageNum = parseInt(age);
+
+const menor = "Ud. es menor de edad y no puede ingresar";
+const mayor = "Ud. es mayor de edad y puede ingresar";
+const varon = "Sr, ";
+const otro = "Sx, "
+
+var mujerMenor = (genre == "female") && (ageNum < 18);
+var mujerMayor = (genre == "female") && (ageNum >= 18);
+var varonMenor = (genre == "male") && (ageNum < 18);
+var varonMayor = (genre == "male") && (ageNum >= 18);
+var otroMenor = (genre == "otro") && (ageNum < 18);
+var otroMayor = (genre == "otro") && (ageNum > 18);
+
+if (mujerMenor){
+    console.log ("Srta, " + menor);
+}
+else if (mujerMayor){
+    console.log ("Sra, " + mayor);
+}
+else if (varonMenor){
+    console.log (varon + menor);
+}
+else if (varonMayor){
+    console.log (varon + mayor);
+}
+else if (otroMenor){
+    console.log ( otro + menor);
+}
+else if (otroMayor){
+    console.log (otro + mayor);
+}
+else {
+    console.log ("Datos no validos")
+}
+
+/*SOLUCION DEL PROFE*/
+/*var edad = prompt("Que edad tenes?");
+   var genero = prompt("Que genero sos?");
+​
+   var edadNum = parseInt(edad);
+   var ust = "Sr.";
+   
+   if (genero == "female") {
+     ust = "Sra.";
+   } else if(genero != "male") {
+     ust = "Sx.";
+   }
+    
+   if (edadNum < 18) {
+        console.log(ust + " usted es menor de edad no puede pasar");
+   }else if (edadNum >= 18) {
+        console.log(ust + " usted es mayor de edad y puede pasar");
+   }*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>
